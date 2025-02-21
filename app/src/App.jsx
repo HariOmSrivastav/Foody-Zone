@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import SearchResult from './components/SearchResult';
 // import './App.css'
 
-export const BASE_URL = "http://localhost:9000"; 
+export const BASE_URL = import.meta.env.VITE_API_BASE_URL; 
 
 const App = () => {
 
