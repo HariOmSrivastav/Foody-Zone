@@ -14,7 +14,7 @@ const SearchResult = ({ data }) => {
               <FoodCard key={name}>
                 <div className="food_image">
                   {/* Fetch images correctly from backend */}
-                  <img src={"https://foody-zone-1-f38r.onrender.com/images/egg.png"} alt={name}/>
+                  <img src={`${BASE_URL}/images/${image}`} alt={name}/>
                 </div>
                 <div className="food_info">
                   <div className="info">
