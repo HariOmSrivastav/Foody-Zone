@@ -7,6 +7,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
 
+const BASE_URL = "https://foody-zone-1-f38r.onrender.com/";
+
 app.use("/images", express.static(path.join(__dirname, "../public/images")));
 
 app.get("/", (req, res) => {
