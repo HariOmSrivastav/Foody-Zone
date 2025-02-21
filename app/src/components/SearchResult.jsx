@@ -1,36 +1,36 @@
-import React from "react"
-import bgImage from '../assets/bg.png'
-import styled from 'styled-components'
-import { BASE_URL } from "../App"
-import { Button } from "../App"
-import { Container } from "../App"
+import React from "react";
+import styled from 'styled-components';
+import { BASE_URL } from "../App";
+import { Button, Container } from "../App";
+import bgImage from '../assets/bg.png'; // Fix background image
 
- const SearchResult = ({data}) => {
-   return (
+const SearchResult = ({ data }) => {
+  return (
     <FoodCardContainer>
-     <Container>
-      <FoodCards>
-        {
-            data?.map(({name , image , text , price})=> (
-                <FoodCard key={name}>
-                    <div className="food_image">
-                        <img src={BASE_URL + image }/>
-                    </div>
-                    <div className="food_info">
-                        <div className="info">
-                            <h3>{name}</h3>
-                            <p>{text}</p>
-                        </div>
-                        <Button>₹{price.toFixed(2)}</Button>
-                    </div>
-                </FoodCard>
+      <Container>
+        <FoodCards>
+          {
+            data?.map(({ name, image, text, price }) => (
+              <FoodCard key={name}>
+                <div className="food_image">
+                  {/* Fetch images correctly from backend */}
+                  <img src={`${BASE_URL}/images/${image}`} alt={name} />
+                </div>
+                <div className="food_info">
+                  <div className="info">
+                    <h3>{name}</h3>
+                    <p>{text}</p>
+                  </div>
+                  <Button>₹{price.toFixed(2)}</Button>
+                </div>
+              </FoodCard>
             ))
-        }
-      </FoodCards>
-     </Container>
+          }
+        </FoodCards>
+      </Container>
     </FoodCardContainer>
-   )
- }
+  );
+};
  
  export default SearchResult;
 
