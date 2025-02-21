@@ -14,7 +14,7 @@ const SearchResult = ({ data }) => {
               <FoodCard key={name}>
                 <div className="food_image">
                   {/* Fetch images correctly from backend */}
-                  <img src={`${import.meta.env.VITE_API_BASE_URL}/images/${image}`} alt={name} />
+                  <img src={`${import.meta.env.VITE_API_BASE_URL}/${image}`} alt={name} />
                 </div>
                 <div className="food_info">
                   <div className="info">
