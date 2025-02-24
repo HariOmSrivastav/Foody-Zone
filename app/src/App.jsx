@@ -7,6 +7,7 @@ import SearchResult from './components/SearchResult';
 
 export const BASE_URL = import.meta.env.VITE_API_BASE_URL; 
 
+
 const App = () => {
 
   const [data,setData] = useState(null)
